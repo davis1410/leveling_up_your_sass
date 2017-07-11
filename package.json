@@ -1,0 +1,23 @@
+{
+  "name": "leveling_up_your_sass",
+  "version": "1.0.0",
+  "description": "Code examples from my \"Leveling Up Your SASS\" presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davis1410/leveling_up_your_sass.git"
+  },
+  "author": "Brennan Davis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davis1410/leveling_up_your_sass/issues"
+  },
+  "homepage": "https://github.com/davis1410/leveling_up_your_sass#readme",
+  "devDependencies": {
+    "sassaby": "^2.1.1",
+    "sassdoc": "^2.3.0"
+  }
+}
