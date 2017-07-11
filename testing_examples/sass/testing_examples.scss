@@ -1,0 +1,6 @@
+// border
+@mixin standard_border($list) {
+    @each $direction in $list {
+        border-#{$direction}: 1px solid $standard-border-color;
+    }
+}
