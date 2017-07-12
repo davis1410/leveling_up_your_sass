@@ -1,0 +1,78 @@
+// !default
+$light-gray: #eee !default;
+$dark-gray: #333 !default;
+$green: #3FBF3F !default;
+
+
+// @extends
+.btn {
+    background: $light-gray;
+    color: $dark-gray;
+    border: 1px solid $dark-gray;
+    border-radius: 3px;
+
+    &:hover {
+        background: $dark-gray;
+        color: $light-gray;
+    }
+}
+
+.btn-secondary {
+    @extends .btn;
+
+    background: $green;
+
+    &:hover {
+        color: $green;
+    }
+}
+
+
+// @content
+$tablet: 768px !default;
+$desktop: 992px !default;
+$large_desktop: 1200px !default;
+
+@mixin tablet {
+    @media screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin large_desktop {
+    @media screen and (min-width: #{$large_desktop}) {
+        @content;
+    }
+}
+
+#content {
+    width: 100%;
+
+    @include tablet {
+        width: 800px;
+    }
+
+    @include desktop {
+        width: 900px;
+    }
+
+    @include large_desktop {
+        width: 1000px;
+    }
+}
+
+
+// @if
+
+
+
+// @for
+
+
+// @each
