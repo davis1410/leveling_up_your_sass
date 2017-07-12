@@ -77,8 +77,12 @@ $large_desktop: 1200px !default;
     }
 }
 
-.box {
+.box_with_shadow {
     @include box(true);
+}
+
+.box_without_shadow {
+    @include box(false);
 }
 
 

@@ -27,9 +27,12 @@
       width: 1000px; } }
 
 /********** @if **********/
-.box {
+.box_with_shadow {
   background: #333;
   box-shadow: 1px 1px 3px #eee; }
+
+.box_without_shadow {
+  background: #333; }
 
 /********** @for **********/
 .margin-1 {
