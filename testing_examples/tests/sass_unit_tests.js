@@ -9,6 +9,13 @@ describe('mixins', function() {
         ]
     });
 
+    // function
+    describe('calculate-percent', function() {
+        it('should calculate what percent the first argument is of the second argument', function() {
+            sassaby.func('calculate-percent').calledWithArgs('650px', '1000px').equals('65%');
+        });
+    })
+
     // standalone mixin
     describe('float', function() {
         it('should create a new float class with the given direction', function() {
@@ -16,7 +23,7 @@ describe('mixins', function() {
         });
         it('should set the float property to the given direction', function() {
             sassaby.standaloneMixin('float').calledWithArgs('left').declares('float', 'left');
-        })
+        });
     })
 
     // included mixin

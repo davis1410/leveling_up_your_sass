@@ -1,3 +1,8 @@
+// function
+@function calculate-percent($target, $container) {
+    @return ($target / $container) * 100%;
+}
+
 // standalone mixin
 @mixin float($direction) {
     .float-#{$direction} {
