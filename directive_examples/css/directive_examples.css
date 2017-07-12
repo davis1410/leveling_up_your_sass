@@ -1,18 +1,19 @@
-.btn {
+/********** @extend **********/
+.btn, .btn-secondary {
   background: #eee;
   color: #333;
   border: 1px solid #333;
   border-radius: 3px; }
-  .btn:hover {
+  .btn:hover, .btn-secondary:hover {
     background: #333;
     color: #eee; }
 
 .btn-secondary {
-  @extends .btn;
   background: #3FBF3F; }
   .btn-secondary:hover {
     color: #3FBF3F; }
 
+/********** @content **********/
 #content {
   width: 100%; }
   @media screen and (min-width: 768px) {
@@ -25,10 +26,12 @@
     #content {
       width: 1000px; } }
 
+/********** @if **********/
 .box {
   background: #333;
   box-shadow: 1px 1px 3px #eee; }
 
+/********** @for **********/
 .margin-1 {
   margin: 10px; }
 
@@ -44,6 +47,7 @@
 .margin-5 {
   margin: 50px; }
 
+/********** @each **********/
 #content {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;

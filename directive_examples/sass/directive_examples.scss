@@ -5,7 +5,7 @@ $green: #3FBF3F !default;
 $standard_border_color: #ccc !default;
 
 
-// @extends
+/********** @extend **********/
 .btn {
     background: $light-gray;
     color: $dark-gray;
@@ -19,7 +19,7 @@ $standard_border_color: #ccc !default;
 }
 
 .btn-secondary {
-    @extends .btn;
+    @extend .btn;
 
     background: $green;
 
@@ -29,7 +29,7 @@ $standard_border_color: #ccc !default;
 }
 
 
-// @content
+/********** @content **********/
 $tablet: 768px !default;
 $desktop: 992px !default;
 $large_desktop: 1200px !default;
@@ -69,7 +69,7 @@ $large_desktop: 1200px !default;
 }
 
 
-// @if
+/********** @if **********/
 @mixin box($has_shadow) {
     background: $dark-gray;
     @if $has_shadow {
@@ -82,7 +82,7 @@ $large_desktop: 1200px !default;
 }
 
 
-// @for
+/********** @for **********/
 @for $i from 1 through 5 {
     .margin-#{$i} {
         margin: 10px * $i;
@@ -90,7 +90,7 @@ $large_desktop: 1200px !default;
 }
 
 
-// @each
+/********** @each **********/
 @mixin standard_border($list) {
     @each $direction in $list {
         border-#{$direction}: 1px solid $standard-border-color;
