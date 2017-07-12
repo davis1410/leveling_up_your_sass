@@ -1,4 +1,12 @@
-// border
+// standalone mixin
+@mixin float($direction) {
+    .float-#{$direction} {
+        display: block;
+        float: $direction;
+    }
+}
+
+// included mixin
 @mixin standard_border($list) {
     @each $direction in $list {
         border-#{$direction}: 1px solid $standard-border-color;

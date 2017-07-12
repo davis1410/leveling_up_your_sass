@@ -9,6 +9,17 @@ describe('mixins', function() {
         ]
     });
 
+    // standalone mixin
+    describe('float', function() {
+        it('should create a new float class with the given direction', function() {
+            sassaby.standaloneMixin('float').calledWithArgs('left').createsSelector('.float-left');
+        });
+        it('should set the float property to the given direction', function() {
+            sassaby.standaloneMixin('float').calledWithArgs('left').declares('float', 'left');
+        })
+    })
+
+    // included mixin
     describe('standard_border', function() {
         var output = "border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; border-left: 1px solid #ccc;";
         it('should create a border attribute for each given direction', function() {
