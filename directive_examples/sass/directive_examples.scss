@@ -69,10 +69,33 @@ $large_desktop: 1200px !default;
 
 
 // @if
+@mixin box($has_shadow) {
+    background: $dark-gray;
+    @if $has_shadow {
+        box-shadow: 1px 1px 3px $light-gray;
+    }
+}
 
+.box {
+    @include box(true);
+}
 
 
 // @for
+@for $i from 1 through 5 {
+    .margin-#{$i} {
+        margin: 10px * $i;
+    }
+}
 
 
 // @each
+@mixin standard_border($list) {
+    @each $direction in $list {
+        border-#{$direction}: 1px solid $standard-border-color;
+    }
+}
+
+#content {
+    @include standard_border(top bottom left right);
+}
